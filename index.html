@@ -66,8 +66,8 @@ input[type=submit] {
 </head>
 <body>
 
-<h3>Password Validation</h3>
-<p>Try to submit the form.</p>
+<h3>Neddy's Computer</h3>
+<p>Is this what I am meant to put here? how do you work this thing</p>
 
 <div class="container">
   <form action="/action_page.php">
@@ -82,15 +82,13 @@ input[type=submit] {
 </div>
 
 <div id="message">
-  <h3>Password must contain the following:</h3>
-  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-  <p id="number" class="invalid">A <b>number</b></p>
-  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+  <h3>Merlin said I should protect my secrets better, so I read up on it and they all use riddles and so will I!</h3>
+  <p id="letter" class="invalid">Insert Riddle Here
 </div>
 				
 <script>
 var myInput = document.getElementById("psw");
+var myUser = document.getElementById("usrname");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
@@ -108,44 +106,14 @@ myInput.onblur = function() {
 
 // When the user starts to type something inside the password field
 myInput.onkeyup = function() {
-  // Validate lowercase letters
-  var lowerCaseLetters = /[a-z]/g;
-  if(myInput.value.match(lowerCaseLetters)) {  
-    letter.classList.remove("invalid");
-    letter.classList.add("valid");
-  } else {
-    letter.classList.remove("valid");
-    letter.classList.add("invalid");
-  }
-  
-  // Validate capital letters
-  var upperCaseLetters = /[A-Z]/g;
-  if(myInput.value.match(upperCaseLetters)) {  
-    capital.classList.remove("invalid");
-    capital.classList.add("valid");
-  } else {
-    capital.classList.remove("valid");
-    capital.classList.add("invalid");
-  }
-
-  // Validate numbers
-  var numbers = /[0-9]/g;
-  if(myInput.value.match(numbers)) {  
-    number.classList.remove("invalid");
-    number.classList.add("valid");
-  } else {
-    number.classList.remove("valid");
-    number.classList.add("invalid");
-  }
-  
-  // Validate length
-  if(myInput.value.length >= 8) {
-    length.classList.remove("invalid");
-    length.classList.add("valid");
-  } else {
-    length.classList.remove("valid");
-    length.classList.add("invalid");
-  }
+ 
+	var password = "NeddyRoxMerlinsSox";
+	var myUsername = "Vam-mosh";
+	if(myInput.value.match(password) && myUser.value.match(myUsername)){
+	document.getElementById("message").style.display = "block";
+	} else {
+	document.getElementById("message").style.display = "none";
+	}
 }
 </script>
 
