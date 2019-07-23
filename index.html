@@ -77,7 +77,6 @@ input[type=submit] {
     <label for="psw">Password</label>
     <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
     
-    <input type="submit" value="Submit">
   </form>
 </div>
 
@@ -96,6 +95,17 @@ var length = document.getElementById("length");
 
 // When the user starts to type something inside the password field
 myInput.onkeyup = function() {
+ 
+	var password = "NeddyRoxMerlinsSox";
+	var myUsername = "Vam-mosh";
+	if(myInput.value.match(password) && myUser.value.match(myUsername)){
+	document.getElementById("message").style.display = "block";
+	} else {
+	document.getElementById("message").style.display = "none";
+	}
+}
+	
+myUser.onkeyup = function() {
  
 	var password = "NeddyRoxMerlinsSox";
 	var myUsername = "Vam-mosh";
