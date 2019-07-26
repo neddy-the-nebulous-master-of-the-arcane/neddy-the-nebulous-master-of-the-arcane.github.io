@@ -57,16 +57,32 @@ input[type=submit] {
 </div>
 
 <div id="message">
-  <h3>Merlin said I should protect my secrets better, so I read up on it and they all use riddles and so will I!</h3>
-  <p id="letter">Insert Riddle Here
+  <h3>Answer the questions below, answer in lowercase with no punction and the answer will reveal itself</h3>
+  <p id="letter">p77<\br>
+Merlin is the son of an <input type="text" id="incubus" name="incubus" required>
+<\br>
+Merlin is Welsh and <input type="text" id="wise" name="wise" required>
+<\br><\br>
+p126 
+<\br>
+What tool measures Length? <input type="text" id="spear" name="spear" required>
+
+</div>
+	<div id="message2">
+  <h3>The Code is 8350</h3>
+
 </div>
 				
 <script>
 var myInput = document.getElementById("psw");
-var letter = document.getElementById("letter");
-var capital = document.getElementById("capital");
-var number = document.getElementById("number");
-var length = document.getElementById("length");
+	var incubus = document.getElementById("incubus");
+	var wise = document.getElementById("wise");
+	var spear = document.getElementById("spear");
+	var letter = document.getElementById("letter");
+	var capital = document.getElementById("capital");
+	var number = document.getElementById("number");
+	var length = document.getElementById("length");
+	var message2 = document.getElementById("message2");
 
 // When the user starts to type something inside the password field
 myInput.onkeyup = function() {
@@ -78,6 +94,42 @@ myInput.onkeyup = function() {
 	document.getElementById("message").style.display = "none";
 	}
 }
+	
+	incubus.onkeyup = function() {
+ 
+		var password1 = "incubus";
+		var password2 = "wise";
+		var password3 = "spear";
+		if(incubus.value.match(password1)&&wise.value.match(password2)&&spear.value.match(password3)){
+		document.getElementById("message2").style.display = "block";
+		} else {
+		document.getElementById("message2").style.display = "none";
+		}
+	}
+	
+	wise.onkeyup = function() {
+ 
+		var password1 = "incubus";
+		var password2 = "wise";
+		var password3 = "spear";
+		if(incubus.value.match(password1)&&wise.value.match(password2)&&spear.value.match(password3)){
+		document.getElementById("message2").style.display = "block";
+		} else {
+		document.getElementById("message2").style.display = "none";
+		}
+	}
+	
+	spear.onkeyup = function() {
+ 
+		var password1 = "incubus";
+		var password2 = "wise";
+		var password3 = "spear";
+		if(incubus.value.match(password1)&&wise.value.match(password2)&&spear.value.match(password3)){
+		document.getElementById("message2").style.display = "block";
+		} else {
+		document.getElementById("message2").style.display = "none";
+		}
+	}
 	
 
 </script>
